@@ -1,0 +1,40 @@
+# Basics
+export EDITOR='nvim'
+export TERMINAL='alacritty'
+export BROWSER='firefox'
+export TERM='xterm-256color'
+
+# Not case sensitive tab
+autoload -Uz compinit && compinit
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
+
+# Aliases
+alias pac='sudo pacman'
+alias wal='feh --bg-fill --randomize ~/Media/wallpapers/'
+alias cls='clear'
+alias loc='plocate -i'
+
+# Git aliases
+alias status='git status'
+alias add='git add'
+alias commit='git commit -m'
+alias push='git push'
+alias pull='git pull'
+
+# Prompt
+PROMPT='%F{blue}%1/%f %F{cyan} %f'
+
+# Git Prompt
+autoload -Uz vcs_info
+precmd_vcs_info() { vcs_info }
+precmd_functions+=( precmd_vcs_info )
+setopt prompt_subst
+RPROMPT=\$vcs_info_msg_0_
+zstyle ':vcs_info:git:*' formats '%F{red}(%b)%r%f'
+zstyle ':vcs_info:*' enable git
+
+# Flutter
+export PATH="$PATH:/home/lutz/Dev/flutter/bin"
+
+# Android Studio
+export _JAVA_AWT_WM_NONREPARENTING=1
