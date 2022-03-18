@@ -16,11 +16,11 @@ alias loc='plocate -i'
 alias mutt='neomutt'
 
 # Git aliases
-alias status='git status'
-alias add='git add'
-alias commit='git commit -m'
-alias push='git push'
-alias pull='git pull'
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit -m'
+alias gps='git push'
+alias gpl='git pull'
 
 # Prompt
 PROMPT='%F{blue}%1/%f %F{cyan} %f'
