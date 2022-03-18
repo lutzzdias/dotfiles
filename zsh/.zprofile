@@ -1,1 +1,1 @@
-fortune ~/.scripts/quotes
+fortune ~/.config/scripts/quotes

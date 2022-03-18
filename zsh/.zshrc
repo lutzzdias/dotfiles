@@ -13,6 +13,7 @@ alias pac='sudo pacman'
 alias wal='feh --bg-fill --randomize ~/Media/wallpapers/'
 alias cls='clear'
 alias loc='plocate -i'
+alias mutt='neomutt'
 
 # Git aliases
 alias status='git status'
