@@ -227,6 +227,13 @@ return packer.startup(function()
       end,
    }
 
+   use { 
+       "iamcco/markdown-preview.nvim",
+       run = "cd app && npm install",
+       setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
+       ft = { "markdown" },
+   }
+
    -- file managing , picker etc
    use {
       "kyazdani42/nvim-tree.lua",
