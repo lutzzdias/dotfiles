@@ -18,7 +18,7 @@ What configuration files are those?
 - [x] [alacritty](#alacritty) config
 - [ ] [bspwm](#bspwm) config
 - [ ] [dunst](#dunst) config
-- [ ] [ly](#ly) config
+- [x] [ly](#ly) config
 - [ ] [neomutt](#neomutt) config
 - [ ] [neovim](#neovim) config
 - [x] [polybar](#polybar) config
@@ -64,8 +64,8 @@ manager for Linux and BSD". I did not use display
 managers for quite some time. I always thought 
 they were unnecessary and bloat. However, once I 
 saw this simple dm it won my heart, this config
-is basically the same as the default, but I had 
-to include it here.
+is basically the same as the default, there is not much
+to change.
 
 
 #### neomutt
