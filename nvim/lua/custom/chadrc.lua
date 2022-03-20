@@ -23,7 +23,7 @@ M.options = {
 }
 
  M.ui = {
-   theme = "onedark",
+   --theme = "onedark",
    transparency = true,
 }
 
