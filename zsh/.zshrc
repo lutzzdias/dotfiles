@@ -14,6 +14,7 @@ alias wal='feh --bg-fill --randomize ~/Media/wallpapers/'
 alias cls='clear'
 alias loc='plocate -i'
 alias mutt='neomutt'
+alias b='brightnessctl s'
 
 # Git aliases
 alias gs='git status'
