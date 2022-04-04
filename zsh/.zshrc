@@ -10,7 +10,7 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 
 # Aliases
 alias pac='sudo pacman'
-alias wal='feh --bg-fill --randomize ~/Media/wallpapers/'
+alias wal='feh --no-fehbg --bg-fill --randomize ~/Media/wallpapers/'
 alias cls='clear'
 alias loc='plocate -i'
 alias mutt='neomutt'
