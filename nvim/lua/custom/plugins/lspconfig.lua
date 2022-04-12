@@ -4,7 +4,8 @@ M.setup_lsp = function(attach, capabilities)
    local lspconfig = require "lspconfig"
 
    -- lspservers with default config
-   local servers = { "html", "cssls", "clangd", "dartls", "denols" }
+   local servers = { "html", "cssls", "dartls", "denols" }
+   -- clangd is causing trouble
 
    for _, lsp in ipairs(servers) do
       lspconfig[lsp].setup {
