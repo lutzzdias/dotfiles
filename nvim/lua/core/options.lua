@@ -23,7 +23,7 @@ opt.hidden = options.hidden
 opt.ignorecase = options.ignorecase
 opt.smartcase = options.smartcase
 opt.mouse = options.mouse
-opt.so = options.so
+opt.scrolloff = options.scrolloff
 opt.wrap = options.wrap
 opt.hls = options.hls
 
