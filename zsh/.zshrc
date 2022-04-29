@@ -15,8 +15,9 @@ alias cls='clear'
 alias loc='plocate -i'
 alias mutt='neomutt'
 alias b='brightnessctl s'
-alias g++='g++ -Wall -pedantic -std=c++11 -g'
 alias val='valgrind --leak-check=full'
+alias g++='g++ -Wall -pedantic -std=c++11 -g'
+alias sdl='g++ -lSDL2 -lSDL2main'
 
 # Git aliases
 alias gs='git status'
