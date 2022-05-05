@@ -19,7 +19,6 @@ What configuration files are those?
 - [ ] [bspwm](#bspwm) config
 - [ ] [dunst](#dunst) config
 - [x] [ly](#ly) config
-- [ ] [neomutt](#neomutt) config
 - [ ] [neovim](#neovim) config
 - [x] [polybar](#polybar) config
 - [ ] [ranger](#ranger) config
@@ -66,14 +65,6 @@ they were unnecessary and bloat. However, once I
 saw this simple dm it won my heart, this config
 is basically the same as the default, there is not much
 to change.
-
-
-#### neomutt
-
-This is completely new to me. I do not even use 
-[neomutt][neomutt] daily yet. I added this config in here 
-because I'm certain I will be using it consistently
-and will want to change some stuff.
 
 
 #### neovim
@@ -164,7 +155,6 @@ learning.
 [bspwm]: https://github.com/baskerville/bspwm
 [dunst]: https://github.com/dunst-project/dunst
 [ly]: https://github.com/fairyglade/ly
-[neomutt]: https://github.com/neomutt/neomutt
 [neovim]: https://github.com/neovim/neovim
 [nvchad]: https://github.com/NvChad/NvChad
 [polybar]: https://github.com/polybar/polybar
