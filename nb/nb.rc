@@ -1,0 +1,5 @@
+
+
+export NB_DIR="${NB_DIR:-/Users/lutz/Documents/notes}" # Set by `nb` • Sat Nov  4 12:28:02 WET 2023
+
+export EDITOR="nvim" # Set by `nb` • Sat Nov  4 13:31:23 WET 2023

@@ -1,0 +1,15 @@
+[user]
+name = lutzzdias
+email = thiagolutzdias@hotmail.com
+
+[init]
+	defaultBranch = main
+[core]
+	autocrlf = false
+[branch]
+    # set up 'git pull' to rebase instead of merge
+    autosetuprebase = always
+[pull]
+	rebase = true
+[push]
+	autoSetupRemote = true

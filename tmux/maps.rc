@@ -1,0 +1,29 @@
+bind r source-file ~/.config/tmux/tmux.conf # reload tmux config -> prefix + r
+
+bind - split-window -v -c "#{pane_current_path}" # split panes horizontally -> prefix + -
+bind _ split-window -v -f -c "#{pane_current_path}" # split panes horizontally occupying entire horizontal window -> prefix + _
+bind \\ split-window -h -c "#{pane_current_path}" # split panes vertically -> prefix + \
+# TODO: fix below command
+bind S-\\ split-window -h -f -c "#{pane_current_path}" # split panes vertically occupying entire vertical window -> prefix + |
+
+bind -n C-h select-pane -L # switch to pane on the left -> ctrl + h
+bind -n C-j select-pane -D # switch to pane below -> ctrl + j
+bind -n C-k select-pane -U # switch to pane above -> ctrl + k
+bind -n C-l select-pane -R # switch to pane on the right -> ctrl + l
+
+bind X kill-pane # kill pane without confirmation -> prefix + X
+bind q kill-window # kill window without confirmation -> prefix + q
+
+bind n next-window # switch to next window -> prefix + n
+bind N previous-window # switch to previous window -> prefix + N
+
+# Resize panes
+bind -r H resize-pane -L 5 # resize pane to the left -> prefix + H
+bind -r L resize-pane -R 5 # resize pane to the right -> prefix + L
+bind -r K resize-pane -U 5 # resize pane to the top -> prefix + K
+bind -r J resize-pane -D 5 # resize pane to the bottom -> prefix + J
+
+bind = select-layout tiled # tile all panes -> prefix + =
+
+bind l send-keys 'C-l' # clear screen -> prefix + l
+bind R command-prompt "rename-window '%%'" # rename window -> prefix + R

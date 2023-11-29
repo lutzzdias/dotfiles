@@ -1,0 +1,30 @@
+# Status line
+set -g status "on" # enables status line
+set -g status-position top # moves status line to top of window
+set -g status-justify "left" # aligns content to the left
+
+set -g status-left-length "100"
+set -g status-right-length "100"
+
+set -g status-style "fg=#7aa2f7,bg=default" # blue
+set -g status-left "  #S  "
+set -g status-right "#(date '+%a %d %b %H:%M')" # show date in right side
+
+set -g mode-style "fg=#7aa2f7,bg=#1a1b26" # blue,bg
+set -g message-style "fg=#7aa2f7,bg=#1a1b26" # blue,bg
+set -g message-command-style "fg=#7aa2f7,bg=#1a1b26" # blue,bg
+set -g pane-border-style "fg=#16161e" # bg-dark
+set -g pane-active-border-style "fg=#7aa2f7" # blue
+
+setw -g window-status-separator " "
+setw -g window-status-format "#[fg=#565f89,bg=#16161e] #I #W " # fg,bg-dark
+setw -g window-status-current-format "#[fg=#7dcfff,bg=#292e42] #I #W " # fg,bg-highlight
+
+# Pane
+set -g pane-border-style ""
+set -g pane-active-border-style ""
+
+# Window
+set -g window-style ""
+set -g window-active-style ""
+set-window-option -g pane-border-status off

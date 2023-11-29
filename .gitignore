@@ -1,0 +1,18 @@
+# zsh
+zsh/.zsh_sessions/
+zsh/.zcompcache/
+zsh/.zsh_history
+zsh/.zcompdump
+
+# copilot
+github-copilot/
+
+# rust
+cargo/
+rustup/
+
+# flutter
+flutter/
+
+# npm
+npm/
