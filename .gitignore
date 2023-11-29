@@ -4,6 +4,9 @@ zsh/.zcompcache/
 zsh/.zsh_history
 zsh/.zcompdump
 
+# nvim
+nvim/undo/
+
 # copilot
 github-copilot/
 

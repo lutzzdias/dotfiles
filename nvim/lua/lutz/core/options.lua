@@ -52,7 +52,7 @@ opt.splitbelow = true -- split horizontal window to the bottom
 opt.swapfile = false -- turn off swapfile
 opt.backup = false -- turn off backup file
 opt.undofile = true -- use undo file
-opt.undodir = "~/.config/nvim" -- set undo file path
+vim.opt.undodir = os.getenv("HOME") .. "/.config/nvim/undo" -- set undo file path (nvim config root)
 
 -- set custom text width for specific filetypes
 local filetype = vim.bo.filetype
