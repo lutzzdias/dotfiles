@@ -1,7 +1,7 @@
 local opt = vim.opt -- for conciseness
 
 -- general
-opt.shell = 'zsh' -- use zsh as shell
+opt.shell = "zsh" -- use zsh as shell
 opt.title = true -- set title of window to file name
 opt.timeoutlen = 500 -- time to wait for mapped sequence to complete (in milliseconds)
 opt.updatetime = 1000 -- faster responsiveness (default is 4000)
@@ -48,6 +48,14 @@ opt.clipboard:append("unnamedplus") -- use system clipboard as default register
 opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
 
--- title
+-- config files
 opt.swapfile = false -- turn off swapfile
-opt.backup = false
+opt.backup = false -- turn off backup file
+opt.undofile = true -- use undo file
+opt.undodir = "~/.config/nvim" -- set undo file path
+
+-- set custom text width for specific filetypes
+local filetype = vim.bo.filetype
+if filetype == "" or filetype == "md" or filetype == "txt" or filetype == "tex" then
+	vim.opt_local.textwidth = 100
+end
