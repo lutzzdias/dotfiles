@@ -7,7 +7,8 @@ email = thiagolutzdias@hotmail.com
 [core]
 	autocrlf = false
 [branch]
-    autosetuprebase = always
+    # set up 'git pull' to rebase instead of merge
+    # autosetuprebase = always
 [pull]
     # set up 'git pull' to rebase instead of merge
     # rebase = true
