@@ -13,12 +13,6 @@ return {
 					cursorcolumn = false, -- disable cursor column
 				},
 			},
-			plugins = {
-				wezterm = {
-					enabled = true,
-					font = "+4", -- 10% increase per step
-				},
-			},
 		})
 	end,
 }

@@ -57,5 +57,5 @@ vim.opt.undodir = os.getenv("HOME") .. "/.config/nvim/undo" -- set undo file pat
 -- set custom text width for specific filetypes
 local filetype = vim.bo.filetype
 if filetype == "" or filetype == "md" or filetype == "txt" or filetype == "tex" then
-	vim.opt_local.textwidth = 100
+	vim.opt_local.textwidth = 80
 end
