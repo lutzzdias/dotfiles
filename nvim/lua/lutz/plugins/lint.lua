@@ -17,7 +17,8 @@ return {
 		}
 
 		-- remove pylint docstring warning
-		lint.linters.pylint.args = { "--disable=C0114,C0115,C0116" }
+		lint.linters.pylint.args =
+			"--disable=missing-module-docstring,missing-class-docstring,missing-function-docstring"
 
 		-- automatically lint when 'BufEnter', 'BufWritePost' or 'InsertLeave'
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
