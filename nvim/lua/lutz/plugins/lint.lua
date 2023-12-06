@@ -16,6 +16,9 @@ return {
 			python = { "pylint" },
 		}
 
+		-- remove pylint docstring warning
+		lint.linters.pylint.args = { "--disable=C0114,C0115,C0116" }
+
 		-- automatically lint when 'BufEnter', 'BufWritePost' or 'InsertLeave'
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
 		vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
