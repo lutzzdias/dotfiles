@@ -4,6 +4,8 @@ return {
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 	},
-
-	-- TODO: Check for configuring this
+	config = function()
+		-- import
+		local lazygit = require("lazygit")
+	end,
 }
