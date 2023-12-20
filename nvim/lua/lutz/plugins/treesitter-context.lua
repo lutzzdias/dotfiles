@@ -5,14 +5,14 @@ return {
 	dependencies = { "nvim-treesitter/nvim-treesitter" },
 	config = function()
 		-- import
-		require("treesitter-context").setup({
-			enabled = true,
-		})
+		local tsc = require("treesitter-context")
+
+		tsc.setup({})
 
 		-- keymaps
 		local opts = { desc = "Jump upwards to context" }
 		vim.keymap.set("n", "<leader>K", function()
-			--			tsc.go_to_context()
+			tsc.go_to_context()
 		end, opts)
 	end,
 }
