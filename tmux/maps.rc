@@ -15,7 +15,7 @@ bind X kill-pane # kill pane without confirmation -> prefix + X
 bind q kill-window # kill window without confirmation -> prefix + q
 
 bind n next-window # switch to next window -> prefix + n
-bind N previous-window # switch to previous window -> prefix + N
+bind p previous-window # switch to previous window -> prefix + N
 
 # Resize panes
 bind -r H resize-pane -L 5 # resize pane to the left -> prefix + H
