@@ -1,2 +1,2 @@
-require("lutz.core")
-require("lutz.lazy")
+require("core")
+require("lazy-setup")
