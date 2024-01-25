@@ -53,9 +53,3 @@ opt.swapfile = false -- turn off swapfile
 opt.backup = false -- turn off backup file
 opt.undofile = true -- use undo file
 vim.opt.undodir = os.getenv("HOME") .. "/.config/nvim/undo" -- set undo file path (nvim config root)
-
--- set custom text width for specific filetypes
-local filetype = vim.bo.filetype
-if filetype == "" or filetype == "md" or filetype == "txt" or filetype == "tex" then
-	vim.opt_local.textwidth = 80
-end

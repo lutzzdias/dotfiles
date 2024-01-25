@@ -13,6 +13,18 @@ return {
 					cursorcolumn = false, -- disable cursor column
 				},
 			},
+
+			plugins = {
+				tmux = false,
+			},
+
+			on_open = function()
+				vim.opt.textwidth = vim.fn.winwidth(0)
+			end,
+
+			on_close = function()
+				vim.opt.textwidth = 0
+			end,
 		})
 	end,
 }
