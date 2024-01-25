@@ -1,9 +1,16 @@
 return {
 	"neovim/nvim-lspconfig",
 	event = { "BufReadPre", "BufNewFile" },
+	dependencies = {
+		"hrsh7th/cmp-nvim-lsp",
+	},
 	config = function()
 		-- imports
 		local lsp = require("lspconfig")
+		local cmp_lsp = require("cmp_nvim_lsp")
+
+		-- completion capabilities
+		local capabilities = cmp_lsp.default_capabilities()
 
 		-- Change the Diagnostic symbols in the sign column (gutter)
 		local signs = {
@@ -19,22 +26,23 @@ return {
 		end
 
 		-- html
-		lsp.html.setup({})
+		lsp.html.setup({ capabilities = capabilities })
 
 		-- typescript
-		lsp.tsserver.setup({})
+		lsp.tsserver.setup({ capabilities = capabilities })
 
 		-- css
-		lsp.cssls.setup({})
+		lsp.cssls.setup({ capabilities = capabilities })
 
 		-- tailwind
-		lsp.tailwindcss.setup({})
+		lsp.tailwindcss.setup({ capabilities = capabilities })
 
 		-- python
-		lsp.pyright.setup({})
+		lsp.pyright.setup({ capabilities = capabilities })
 
 		-- lua
 		lsp.lua_ls.setup({
+			capabilities = capabilities,
 			settings = { -- custom settings for lua
 				Lua = {
 					-- make the language server recognize "vim" global
