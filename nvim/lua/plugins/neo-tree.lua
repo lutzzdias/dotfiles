@@ -1,6 +1,6 @@
 return {
 	"nvim-neo-tree/neo-tree.nvim",
-	event = { "BufReadPre", "BufNewFile" },
+	event = { "VimEnter", "BufReadPre", "BufNewFile" },
 	branch = "v3.x",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
@@ -17,7 +17,9 @@ return {
 		})
 
 		-- keymaps
-		vim.keymap.set("n", "<C-n>", ":Neotree filesystem reveal left<CR>", {})
-		vim.keymap.set("n", "<leader>bf", ":Neotree buffers reveal float<CR>", {})
+		local opts = { noremap = true, silent = true }
+
+		opts.desc = "Toggle file explorer"
+		vim.keymap.set("n", "<leader>ee", ":Neotree toggle<CR>", opts)
 	end,
 }
