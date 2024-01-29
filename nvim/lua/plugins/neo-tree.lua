@@ -19,7 +19,7 @@ return {
 		-- keymaps
 		local opts = { noremap = true, silent = true }
 
-		opts.desc = "Toggle file explorer"
-		vim.keymap.set("n", "<leader>ee", ":Neotree toggle<CR>", opts)
+		opts.desc = "Open/focus file explorer"
+		vim.keymap.set("n", "<leader>e", "<cmd>Neotree<CR>", opts)
 	end,
 }
