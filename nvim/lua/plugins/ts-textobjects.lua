@@ -18,10 +18,10 @@ return {
 					lookahead = true,
 
 					keymaps = {
-						["af"] = { query = "@function.outer", desc = "Select outer part of a function" },
-						["if"] = { query = "@function.inner", desc = "Select inner part of a function" },
-						["ac"] = { query = "@class.outer", desc = "Select outer part of a class" },
-						["ic"] = { query = "@class.inner", desc = "Select inner part of a class" },
+						["af"] = { query = "@function.outer", desc = "Select function" },
+						["if"] = { query = "@function.inner", desc = "Select within function" },
+						["ac"] = { query = "@class.outer", desc = "Select class" },
+						["ic"] = { query = "@class.inner", desc = "Select within class" },
 						["as"] = { query = "@scope", query_group = "locals", desc = "Select language scope" },
 					},
 
