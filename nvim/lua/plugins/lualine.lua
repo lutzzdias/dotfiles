@@ -6,10 +6,12 @@ return {
 		local lualine = require("lualine")
 		local lazy_status = require("lazy.status") -- to configure lazy pending updates count
 
+		-- config
 		lualine.setup({
 			options = {
 				theme = "tokyonight",
 				section_separators = { left = "", right = "" },
+				component_separators = { left = "-", right = "-" },
 				always_divide_middle = false,
 			},
 
