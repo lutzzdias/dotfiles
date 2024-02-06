@@ -10,7 +10,34 @@ return {
 
 		-- config
 		telekasten.setup({
+			uuid_type = "rand",
+
+			new_note_filename = "title-uuid",
+			filename_space_subst = "-",
+
 			home = vim.fn.expand("~/Documents/notes"),
+			dailies = vim.fn.expand("~/Documents/journal/daily"),
+			weeklies = vim.fn.expand("~/Documents/journal/weekly"),
+
+			template_new_note = vim.fn.expand("~/Documents/notes/template.md"),
+			template_new_daily = vim.fn.expand("~/Documents/journal/daily/template.md"),
+			template_new_weekly = vim.fn.expand("~/Documents/journal/weekly/template.md"),
+
+			vaults = {
+				uc = {
+					softwareArchitecture = vim.fn.expand("~/Documents/uc/sa"),
+					competitiveProgramming = vim.fn.expand("~/Documents/uc/cp"),
+					metaHeuristics = vim.fn.expand("~/Documents/uc/mh"),
+					softwareEngineering = vim.fn.expand("~/Documents/uc/se"),
+					computerGraphics = vim.fn.expand("~/Documents/uc/cg"),
+					algorithmsAndDataStructures = vim.fn.expand("~/Documents/uc/aed"),
+				},
+			},
+
+			calendar_opts = {
+				weeknm = 5,
+				calendar_monday = 0,
+			},
 		})
 
 		-- keymaps
@@ -24,10 +51,13 @@ return {
 		keymap.set("n", "<leader>zf", "<cmd>Telekasten find_notes<CR>", opts)
 
 		opts.desc = "Search in notes"
-		keymap.set("n", "<leader>zg", "<cmd>Telekasten search_notes<CR>", opts)
+		keymap.set("n", "<leader>zs", "<cmd>Telekasten search_notes<CR>", opts)
 
 		opts.desc = "Go to today's note"
 		keymap.set("n", "<leader>zd", "<cmd>Telekasten goto_today<CR>", opts)
+
+		opts.desc = "Go to this week's note"
+		keymap.set("n", "<leader>zw", "<cmd>Telekasten goto_thisweek<CR>", opts)
 
 		opts.desc = "Go to link under cursor"
 		keymap.set("n", "<leader>zz", "<cmd>Telekasten follow_link<CR>", opts)
