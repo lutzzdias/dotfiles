@@ -5,8 +5,18 @@ return {
 	config = function()
 		local peek = require("peek")
 
-		-- TODO: Figure this out
-		vim.api.nvim_create_user_command("PeekOpen", peek.open, {})
-		vim.api.nvim_create_user_command("PeekClose", peek.close, {})
+		peek.setup({
+			app = "safari",
+			filetype = {
+				"markdown",
+				"telekasten",
+			},
+		})
+
+		-- Keymaps
+		local opts = { noremap = true, silent = true }
+
+		opts.desc = "Open markdown preview"
+		vim.keymap.set("n", "<leader>mp", peek.open, opts)
 	end,
 }
