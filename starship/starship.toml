@@ -16,6 +16,12 @@ truncate_to_repo = true
 read_only = ''
 read_only_style = 'red'
 
+[custom.bartib]
+format = '[󰥔  $output]($style) '
+style = "bold #a9b1d6"
+command = "bartib current | head -n 3 | tail -n 1 | sed 's/[[:space:]]\\{2,\\}/ /g' | awk '{print $4, \"-\", $5}'"
+when = "bartib current | grep -q -v 'No Activity is currently running'"
+
 [c]
 format = '[ $version]($style) '
 style = 'bold blue'
