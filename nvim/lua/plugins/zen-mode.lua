@@ -15,7 +15,7 @@ return {
 			},
 
 			plugins = {
-				tmux = false,
+				tmux = true,
 			},
 
 			on_open = function()
@@ -26,5 +26,11 @@ return {
 				vim.opt.textwidth = 0
 			end,
 		})
+
+		-- keymaps
+		local opts = { noremap = true, silent = true }
+
+		opts.desc = "Toggle ZenMode"
+		vim.keymap.set("n", "<leader>b", "<cmd>ZenMode<CR>", opts)
 	end,
 }
