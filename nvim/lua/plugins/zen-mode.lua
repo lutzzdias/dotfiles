@@ -15,7 +15,7 @@ return {
 			},
 
 			plugins = {
-				tmux = true,
+				tmux = false, -- disabled because it does not show again after exiting zen mode
 			},
 
 			on_open = function()
