@@ -44,5 +44,8 @@ return {
 
 		opts.desc = "Find string under cursor in cwd"
 		keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", opts)
+
+		opts.desc = "Search within :help"
+		keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts)
 	end,
 }
