@@ -19,7 +19,7 @@ return {
 			},
 
 			on_open = function()
-				vim.opt.textwidth = vim.fn.winwidth(0)
+				vim.opt.textwidth = 80
 			end,
 
 			on_close = function()
