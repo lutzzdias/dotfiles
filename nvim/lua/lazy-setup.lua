@@ -23,3 +23,9 @@ require("lazy").setup({ { import = "plugins" }, { import = "plugins.lsp" } }, {
 		notify = false,
 	},
 })
+
+-- keymaps
+local opts = { noremap = true, silent = true }
+
+opts.desc = "Toggle Lazy"
+vim.keymap.set("n", "<leader>L", "<cmd>Lazy<CR>", opts)
