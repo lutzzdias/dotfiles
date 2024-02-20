@@ -25,7 +25,11 @@ return {
 
 			vaults = {
 				uc = {
-					home = vim.fn.expand("~/Documents/uc/"),
+					home = vim.fn.expand("~/Documents/uc/notes"),
+					template_new_note = vim.fn.expand("~/Documents/uc/notes/template.md"),
+					uuid_type = "rand",
+					new_note_filename = "title-uuid",
+					filename_space_subst = "-",
 				},
 			},
 
@@ -40,36 +44,42 @@ return {
 		local opts = { noremap = true, silent = true }
 
 		opts.desc = "Launch telekasten panel"
-		keymap.set("n", "<leader>z", "<cmd>Telekasten panel<CR>", opts)
+		keymap.set("n", "<leader>z", telekasten.panel, opts)
 
 		opts.desc = "Find notes"
-		keymap.set("n", "<leader>zf", "<cmd>Telekasten find_notes<CR>", opts)
+		keymap.set("n", "<leader>zf", telekasten.find_notes, opts)
 
 		opts.desc = "Search in notes"
-		keymap.set("n", "<leader>zs", "<cmd>Telekasten search_notes<CR>", opts)
+		keymap.set("n", "<leader>zs", telekasten.search_notes, opts)
 
 		opts.desc = "Go to today's note"
-		keymap.set("n", "<leader>zd", "<cmd>Telekasten goto_today<CR>", opts)
+		keymap.set("n", "<leader>zd", telekasten.goto_today, opts)
 
 		opts.desc = "Go to this week's note"
-		keymap.set("n", "<leader>zw", "<cmd>Telekasten goto_thisweek<CR>", opts)
+		keymap.set("n", "<leader>zw", telekasten.goto_thisweek, opts)
 
 		opts.desc = "Go to link under cursor"
-		keymap.set("n", "<leader>zz", "<cmd>Telekasten follow_link<CR>", opts)
+		keymap.set("n", "<leader>zz", telekasten.follow_link, opts)
 
 		opts.desc = "Create new note"
-		keymap.set("n", "<leader>zn", "<cmd>Telekasten new_note<CR>", opts)
+		keymap.set("n", "<leader>zn", telekasten.new_note, opts)
 
 		opts.desc = "Show calendar on side panel"
-		keymap.set("n", "<leader>zc", "<cmd>Telekasten show_calendar<CR>", opts)
+		keymap.set("n", "<leader>zc", telekasten.show_calendar, opts)
 
 		opts.desc = "Show backlinks from current buffer"
-		keymap.set("n", "<leader>zb", "<cmd>Telekasten show_backlinks<CR>", opts)
+		keymap.set("n", "<leader>zb", telekasten.show_backlinks, opts)
 
 		opts.desc = "Insert image link"
-		keymap.set("n", "<leader>zI", "<cmd>Telekasten insert_img_link<CR>", opts)
+		keymap.set("n", "<leader>zI", telekasten.insert_img_link, opts)
 
 		opts.desc = "Automatically call insert_link"
-		keymap.set("i", "[[", "<cmd>Telekasten insert_link<CR>", opts)
+		keymap.set("i", "[[", telekasten.insert_link, opts)
+
+		opts.desc = "Choose vault"
+		keymap.set("n", "<leader>zv", telekasten.switch_vault, opts)
+
+		opts.desc = "Show tags"
+		keymap.set("n", "<leader>zt", telekasten.show_tags, opts)
 	end,
 }
