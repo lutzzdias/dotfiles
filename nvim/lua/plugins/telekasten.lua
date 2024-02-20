@@ -25,12 +25,7 @@ return {
 
 			vaults = {
 				uc = {
-					softwareArchitecture = vim.fn.expand("~/Documents/uc/sa"),
-					competitiveProgramming = vim.fn.expand("~/Documents/uc/cp"),
-					metaHeuristics = vim.fn.expand("~/Documents/uc/mh"),
-					softwareEngineering = vim.fn.expand("~/Documents/uc/se"),
-					computerGraphics = vim.fn.expand("~/Documents/uc/cg"),
-					algorithmsAndDataStructures = vim.fn.expand("~/Documents/uc/aed"),
+					home = vim.fn.expand("~/Documents/uc/"),
 				},
 			},
 
