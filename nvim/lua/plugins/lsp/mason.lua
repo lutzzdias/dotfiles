@@ -6,11 +6,11 @@ return {
 	},
 	config = function()
 		-- imports
-        local mason = require('mason')
+		local mason = require("mason")
 		local lspconfig = require("mason-lspconfig")
 		local tool_installer = require("mason-tool-installer")
 
-        mason.setup()
+		mason.setup()
 
 		lspconfig.setup({
 			ensure_installed = {
@@ -36,5 +36,11 @@ return {
 				"eslint_d", -- js linter
 			},
 		})
+
+		-- keymaps
+		local opts = { noremap = true, silent = true }
+
+		opts.desc = "Toggle Mason"
+		vim.keymap.set("n", "<leader>m", "<cmd>Mason<CR>", opts)
 	end,
 }
