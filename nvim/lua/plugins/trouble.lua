@@ -8,5 +8,12 @@ return {
 
 		-- config
 		trouble.setup({})
+
+		-- keymaps
+		local keymap = vim.keymap
+		local opts = { noremap = true, silent = true }
+
+		opts.desc = "Open trouble"
+		keymap.set("n", "<leader>ct", "<cmd>TroubleToggle<cr>", opts)
 	end,
 }
