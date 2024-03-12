@@ -28,7 +28,7 @@ require("lazy").setup({
 	},
 	install = { colorscheme = { "tokyonight" } },
 	dev = {
-		path = "~/Developer/side-projects/nvim",
+		path = "~/Developer/side-projects/nvim-plugins",
 		patterns = { "lutzzdias" },
 		fallback = true, -- Fallback to git when local plugin doesn't exist
 	},
