@@ -22,3 +22,6 @@ npm/
 
 # Visual Studio
 Microsoft\\VisualStudio Services/
+
+# zed
+.tmp*
