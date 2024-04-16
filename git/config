@@ -6,11 +6,5 @@ email = thiagolutzdias@hotmail.com
 	defaultBranch = main
 [core]
 	autocrlf = false
-[branch]
-    # set up 'git pull' to rebase instead of merge
-    # autosetuprebase = always
-[pull]
-    # set up 'git pull' to rebase instead of merge
-    # rebase = true
 [push]
 	autoSetupRemote = true
