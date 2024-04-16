@@ -18,7 +18,7 @@ require("lazy").setup({
 	},
 	checker = {
 		enabled = true,
-		notify = true,
+		notify = false,
 		frequency = 86400, -- check for updates daily
 	},
 	change_detection = { notify = false },
