@@ -37,13 +37,54 @@ return {
 		local cmp = require("cmp")
 		local luasnip = require("luasnip")
 
-		-- TODO: make wait before showing the completion menu
-		cmp.setup({
-			completion = {
-				completeopt = "menu,menuone",
-				autocomplete = false,
-			},
+		local symbols = {
+			Namespace = "󰌗",
+			Text = "󰉿",
+			Method = "󰆧",
+			Function = "󰆧",
+			Constructor = "",
+			Field = "󰜢",
+			Variable = "󰀫",
+			Class = "󰠱",
+			Interface = "",
+			Module = "",
+			Property = "󰜢",
+			Unit = "󰑭",
+			Value = "󰎠",
+			Enum = "",
+			Keyword = "󰌋",
+			Snippet = "",
+			Color = "󰏘",
+			File = "󰈚",
+			Reference = "󰈇",
+			Folder = "󰉋",
+			EnumMember = "",
+			Constant = "󰏿",
+			Struct = "󰙅",
+			Event = "",
+			Operator = "󰆕",
+			TypeParameter = "󰊄",
+			Table = "",
+			Object = "󰅩",
+			Tag = "",
+			Array = "[]",
+			Boolean = "",
+			Number = "",
+			Null = "󰟢",
+			String = "󰉿",
+			Calendar = "",
+			Watch = "󰥔",
+			Package = "",
+			Copilot = "",
+			Codeium = "",
+			TabNine = "",
+		}
 
+		cmp.setup({
+			-- disable pre select
+			preselect = cmp.PreselectMode.None,
+
+			-- where to draw suggestions from
 			sources = {
 				{ name = "nvim_lsp" },
 				{ name = "luasnip" },
@@ -52,76 +93,73 @@ return {
 				{ name = "path" },
 			},
 
+			-- window style
 			window = {
 				completion = {
-					side_padding = 1,
-					-- TODO: make pretty
 					winhighlight = "Normal:Pmenu,CursorLine:PmenuSel,Search:None",
 					scrollbar = false,
 				},
 				documentation = {
-					border = {
-						{ "╭", "CmpDocumentationBorder" },
-						{ "─", "CmpDocumentationBorder" },
-						{ "╮", "CmpDocumentationBorder" },
-						{ "│", "CmpDocumentationBorder" },
-						{ "╯", "CmpDocumentationBorder" },
-						{ "─", "CmpDocumentationBorder" },
-						{ "╰", "CmpDocumentationBorder" },
-						{ "│", "CmpDocumentationBorder" },
-					},
-					winhighlight = "Normal:CmpDocumentation",
+					border = "rounded",
+					winhighlight = "Normal:CmpDocumentation,Search:None",
+					max_width = 80,
+					max_height = 12,
 				},
 			},
 
-			-- TODO: add icons
-			-- formatting = {
-			-- 	fields = { "abbr", "kind", "menu" },
-			-- 	format = function(_, item)
-			-- 		local icon = " " .. item.kind .. " "
-			-- 		item.kind = string.format("%s %s", icon, item.kind)
-			-- 		return item
-			-- 	end,
-			-- },
-
-			snippet = { -- configure how nvim-cmp interacts with snippet engine
+			-- configure how nvim-cmp interacts with snippet engine
+			snippet = {
 				expand = function(args)
 					luasnip.lsp_expand(args.body)
 				end,
 			},
 
-			-- TODO: these definitions are not working
 			-- keymaps
 			mapping = {
-				["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
-				["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
+				["<C-k>"] = cmp.mapping.select_prev_item(),
+				["<C-j>"] = cmp.mapping.select_next_item(),
 				["<C-U>"] = cmp.mapping.scroll_docs(-4),
 				["<C-D>"] = cmp.mapping.scroll_docs(4),
-				["<C-space>"] = cmp.mapping.complete(), -- show completion suggestions
-				["<C-e>"] = cmp.mapping.close(), -- close completion window
+				["<C-e>"] = cmp.mapping.close(),
 				["<CR>"] = cmp.mapping.confirm({ select = false }),
 			},
-		})
 
-		-- Setup delayed completion
-		local timer = nil
-		vim.api.nvim_create_autocmd({ "TextChangedI", "CmdlineChanged" }, {
-			pattern = "*",
-			callback = function()
-				if timer then
-					vim.loop.timer_stop(timer)
-					timer = nil
-				end
+			-- suggestions style
+			formatting = {
+				fields = { "kind", "abbr", "menu" },
 
-				timer = vim.loop.new_timer()
-				timer:start(
-					200,
-					0,
-					vim.schedule_wrap(function()
-						cmp.complete({ reason = cmp.ContextReason.Auto })
-					end)
-				)
-			end,
+				format = function(entry, item)
+					local kind = item.kind
+					local kind_hl_group = ("CmpItemKind%s"):format(kind)
+
+					item.kind = (" %s "):format(symbols[kind])
+
+					local source = entry.source.name
+					if source == "nvim_lsp" or source == "path" then
+						item.menu_hl_group = kind_hl_group
+					else
+						item.menu_hl_group = "Comment"
+					end
+
+					item.menu = kind
+
+					if source == "buffer" then
+						item.menu_hl_group = nil
+						item.menu = nil
+					end
+
+					local half_win_width = math.floor(vim.api.nvim_win_get_width(0) * 0.5)
+					if vim.api.nvim_strwidth(item.abbr) > half_win_width then
+						item.abbr = ("%s…"):format(item.abbr:sub(1, half_win_width))
+					end
+
+					if item.menu then -- Add exta space to visually differentiate `abbr` and `menu`
+						item.abbr = ("%s "):format(item.abbr)
+					end
+
+					return item
+				end,
+			},
 		})
 	end,
 }
