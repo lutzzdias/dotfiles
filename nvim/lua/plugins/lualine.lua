@@ -34,6 +34,9 @@ return {
 				lualine_c = {
 					{
 						"tabs",
+						cond = function()
+							return #vim.fn.gettabinfo() > 1
+						end,
 						mode = 2, -- 2 = show tab name and tab number
 						max_length = vim.o.columns * 2 / 3,
 						use_mode_colors = true, -- update active tab color
