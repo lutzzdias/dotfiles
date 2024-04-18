@@ -5,6 +5,14 @@ It contains most of the important configurations for my terminal applications,
 my main goal with this config is to have a beautiful and functional terminal
 environment.
 
+<img width="1008" alt="image" src="https://github.com/lutzzdias/dotfiles/assets/80894260/ad8f9b3a-1ef1-4d0a-9af4-e92dbb7a0de4">
+
+This picture intends to give you and idea of the UI. It shows wezterm, neovim 
+and tmux open. The following picture shows the starship prompt:
+
+<img width="1008" alt="image" src="https://github.com/lutzzdias/dotfiles/assets/80894260/14a3d5a7-0c61-41e3-91fc-f5c5c8363896">
+
+
 In order for these configurations to work properly you should have a [NerdFont]
 (https://www.nerdfonts.com) installed. I, personally, use the _JetBrainsMono
 Nerd Font_. If you decide to use another you will have to specify it in some of
