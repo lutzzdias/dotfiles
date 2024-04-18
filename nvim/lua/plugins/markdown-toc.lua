@@ -18,6 +18,9 @@ return {
 		})
 
 		-- keymaps
-		-- defined in ftplugin/markdown.lua
+		local opts = { noremap = true, silent = true }
+
+		opts.desc = "Generate Table of Contents"
+		vim.keymap.set("n", "<leader>tc", "<cmd>Mtoc<CR>", opts)
 	end,
 }

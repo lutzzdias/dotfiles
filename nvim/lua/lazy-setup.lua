@@ -16,21 +16,26 @@ require("lazy").setup({
 		{ import = "plugins" },
 		{ import = "plugins.lsp" },
 	},
+
 	checker = {
 		enabled = true,
 		notify = false,
-		frequency = 86400, -- check for updates daily
+		frequency = 86400, -- daily
 	},
+
 	change_detection = { notify = false },
+
 	ui = {
 		border = "rounded",
 		title = "lazy.nvim",
 	},
+
 	install = { colorscheme = { "tokyonight" } },
+
 	dev = {
 		path = "~/Developer/side-projects/nvim-plugins",
 		patterns = { "lutzzdias" },
-		fallback = true, -- Fallback to git when local plugin doesn't exist
+		fallback = false,
 	},
 })
 
