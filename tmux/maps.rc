@@ -1,29 +1,39 @@
-bind r source-file ~/.config/tmux/tmux.conf # reload tmux config -> prefix + r
+# reload config
+bind r source-file ~/.config/tmux/tmux.conf
 
-bind - split-window -v -c "#{pane_current_path}" # split panes horizontally -> prefix + -
-bind _ split-window -v -f -c "#{pane_current_path}" # split panes horizontally occupying entire horizontal window -> prefix + _
-bind \\ split-window -h -c "#{pane_current_path}" # split panes vertically -> prefix + \
-# TODO: fix below command
-bind S-\\ split-window -h -f -c "#{pane_current_path}" # split panes vertically occupying entire vertical window -> prefix + |
+# split horizontally
+bind - split-window -v -c "#{pane_current_path}"
+# split horizontally entire window size
+bind _ split-window -v -f -c "#{pane_current_path}" 
+# split vertically
+bind \\ split-window -h -c "#{pane_current_path}" 
+# split vertically entire window size
+bind | split-window -h -f -c "#{pane_current_path}" 
 
-bind -n C-h select-pane -L # switch to pane on the left -> ctrl + h
-bind -n C-j select-pane -D # switch to pane below -> ctrl + j
-bind -n C-k select-pane -U # switch to pane above -> ctrl + k
-bind -n C-l select-pane -R # switch to pane on the right -> ctrl + l
+# kill pane without confirmation
+bind X kill-pane
+# kill window without confirmation
+bind q kill-window
 
-bind X kill-pane # kill pane without confirmation -> prefix + X
-bind q kill-window # kill window without confirmation -> prefix + q
+# switch to next window
+bind n next-window 
+# switch to previous window
+bind p previous-window 
 
-bind n next-window # switch to next window -> prefix + n
-bind p previous-window # switch to previous window -> prefix + N
+# resize pane to the left
+bind -r H resize-pane -L 5 
+# resize pane to the right
+bind -r L resize-pane -R 5 
+# resize pane to the top
+bind -r K resize-pane -U 5 
+# resize pane to the bottom
+bind -r J resize-pane -D 5 
 
-# Resize panes
-bind -r H resize-pane -L 5 # resize pane to the left -> prefix + H
-bind -r L resize-pane -R 5 # resize pane to the right -> prefix + L
-bind -r K resize-pane -U 5 # resize pane to the top -> prefix + K
-bind -r J resize-pane -D 5 # resize pane to the bottom -> prefix + J
+# make all panes default size (tiled)
+bind = select-layout tiled 
 
-bind = select-layout tiled # tile all panes -> prefix + =
+# clear screen
+bind l send-keys 'C-l'
 
-bind l send-keys 'C-l' # clear screen -> prefix + l
-bind R command-prompt "rename-window '%%'" # rename window -> prefix + R
+# rename current window
+bind R command-prompt "rename-window '%%'"
