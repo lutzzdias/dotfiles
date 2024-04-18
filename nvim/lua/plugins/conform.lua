@@ -28,12 +28,15 @@ return {
 		})
 
 		-- keymaps
+		local opts = { noremap = true, silent = true }
+
+		opts.desc = "Format file"
 		vim.keymap.set({ "n", "v" }, "<leader>f", function()
 			conform.format({
 				lsp_fallback = true,
 				async = false,
 				timeout_ms = 500,
 			})
-		end, { desc = "Format file" })
+		end, opts)
 	end,
 }
