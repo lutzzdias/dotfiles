@@ -148,15 +148,6 @@ return {
 						item.menu = nil
 					end
 
-					local half_win_width = math.floor(vim.api.nvim_win_get_width(0) * 0.5)
-					if vim.api.nvim_strwidth(item.abbr) > half_win_width then
-						item.abbr = ("%s…"):format(item.abbr:sub(1, half_win_width))
-					end
-
-					if item.menu then -- Add exta space to visually differentiate `abbr` and `menu`
-						item.abbr = ("%s "):format(item.abbr)
-					end
-
 					return item
 				end,
 			},
