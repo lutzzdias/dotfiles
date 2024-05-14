@@ -14,6 +14,13 @@ export BARTIB_FILE="/Users/lutz/.local/share/bartib/data.bartib"                
 export DBUS_SESSION_BUS_ADDRESS="unix:path=$DBUS_LAUNCHD_SESSION_BUS_SOCKET"    # dbus (zathura)
 
 # Paths
+
+# Tmux - conda path fix
+if [ -x /usr/libexec/path_helper ]; then
+        PATH="" # <- ADD THIS LINE (right before path_helper call)
+        eval `/usr/libexec/path_helper -s`
+fi
+
 export PATH="/usr/bin/java${PATH+:$PATH}"                                       # java
 export PATH="/opt/flutter/bin${PATH+:$PATH}"                                    # flutter
 export PATH="/opt/homebrew/bin:/opt/homebrew/sbin${PATH+:$PATH}"                # brew

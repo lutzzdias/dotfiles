@@ -7,8 +7,6 @@ export EDITOR='nvim'
 alias cls='clear'
 alias ls='eza'
 alias vim='nvim'
-alias python='pypy3'
-alias pip='pip3'
 
 # Brew completions
 if type brew &>/dev/null
