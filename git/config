@@ -1,6 +1,7 @@
 [user]
 name = lutzzdias
 email = thiagolutzdias@hotmail.com
+signingkey = B61C555C59AB918B1EE135F799D61F35B091640E
 
 [init]
 	defaultBranch = main
@@ -8,3 +9,5 @@ email = thiagolutzdias@hotmail.com
 	autocrlf = false
 [push]
 	autoSetupRemote = true
+[commit]
+	gpgsign = true
