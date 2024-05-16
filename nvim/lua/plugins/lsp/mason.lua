@@ -30,9 +30,9 @@ return {
 			ensure_installed = {
 				"prettierd", -- prettierd formatter
 				"stylua", -- lua formatter
-				"isort", -- python formatter
+				"isort", -- python import sorting
 				"black", -- python formatter
-				"pylint", -- python linter
+				"flake8", -- python linter
 				"eslint_d", -- js linter
 			},
 		})
