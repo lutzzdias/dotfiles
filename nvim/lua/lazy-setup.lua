@@ -31,12 +31,6 @@ require("lazy").setup({
 	},
 
 	install = { colorscheme = { "tokyonight" } },
-
-	dev = {
-		path = "~/Developer/side-projects/nvim-plugins",
-		patterns = { "lutzzdias" },
-		fallback = false,
-	},
 })
 
 -- keymaps

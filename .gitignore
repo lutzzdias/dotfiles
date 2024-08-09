@@ -9,19 +9,3 @@ nvim/undo/
 
 # copilot
 github-copilot/
-
-# rust
-cargo/
-rustup/
-
-# flutter
-flutter/
-
-# npm
-npm/
-
-# Visual Studio
-Microsoft\\VisualStudio Services/
-
-# zed
-.tmp*

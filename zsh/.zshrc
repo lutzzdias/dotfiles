@@ -4,18 +4,8 @@ clear
 export EDITOR='nvim'
 
 # Aliases
-alias cls='clear'
 alias ls='eza'
 alias vim='nvim'
-
-# Brew completions
-if type brew &>/dev/null
-then
-  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-
-  autoload -Uz compinit
-  compinit
-fi
 
 # init starship
 eval "$(starship init zsh)"

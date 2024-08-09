@@ -7,11 +7,10 @@ environment.
 
 <img width="1008" alt="image" src="https://github.com/lutzzdias/dotfiles/assets/80894260/ad8f9b3a-1ef1-4d0a-9af4-e92dbb7a0de4">
 
-This picture intends to give you and idea of the UI. It shows wezterm, neovim 
+This picture intends to give you and idea of the UI. It shows wezterm, neovim
 and tmux open. The following picture shows the starship prompt:
 
 <img width="1008" alt="image" src="https://github.com/lutzzdias/dotfiles/assets/80894260/14a3d5a7-0c61-41e3-91fc-f5c5c8363896">
-
 
 In order for these configurations to work properly you should have a [NerdFont]
 (https://www.nerdfonts.com) installed. I, personally, use the _JetBrainsMono
@@ -26,7 +25,6 @@ config
 
 <!-- start table of contents -->
 
-* [btop](#btop)
 * [git](#git)
 * [lazygit](#lazygit)
 * [nvim](#nvim)
@@ -37,17 +35,6 @@ config
 
 <!-- end table of contents -->
 </details>
-
-## btop
-
-This app is similar to the windows task manager. It keeps tracks of processes,
-how much RAM each process uses, CPU usage, etc. You can also use it to terminate
-a given process, just like in the task manager.
-
-I have to admit that I added this config here intending to better tune it later
-and ended up never messing with it. I do not use this app that often and the
-defaults are pretty sane. I still plan on tinkering with it in the future
-though.
 
 ## git
 
