@@ -6,7 +6,6 @@ source ~/.orbstack/shell/init.zsh 2>/dev/null || :
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"                   # starship
 export RUSTUP_HOME="$HOME/.config/rustup"                                       # rustup
 export CARGO_HOME="$HOME/.config/cargo"                                         # cargo
-export PYTHONSTARTUP="$HOME/.config/python/python.rc"                           # python
 export PUB_CACHE="$HOME/.cache/pub"                                             # dart
 export NPM_CONFIG_USERCONFIG="$HOME/.config/npm/npm.rc"                         # npm
 export PNPM_HOME="$HOME/Library/pnpm"                                           # pnpm
@@ -41,3 +40,4 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
