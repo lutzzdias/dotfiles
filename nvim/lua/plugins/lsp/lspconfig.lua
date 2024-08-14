@@ -40,6 +40,9 @@ return {
 		-- python
 		lsp.pyright.setup({ capabilities = capabilities })
 
+		-- elixir
+		lsp.elixirls.setup({ cmd = { "elixir-ls" }, capabilities = capabilities })
+
 		-- lua
 		lsp.lua_ls.setup({
 			capabilities = capabilities,

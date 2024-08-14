@@ -20,6 +20,7 @@ return {
 				"html", -- html
 				"cssls", -- css
 				"tailwindcss", -- tailwind
+				"elixirls", -- elixir
 			},
 
 			-- auto-install configured servers (with lspconfig)
