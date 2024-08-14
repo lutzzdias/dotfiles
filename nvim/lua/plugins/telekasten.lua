@@ -16,20 +16,8 @@ return {
 			filename_space_subst = "-",
 
 			home = vim.fn.expand("~/Documents/notes"),
-			dailies = vim.fn.expand("~/Documents/journal/daily"),
 
 			template_new_note = vim.fn.expand("~/Documents/notes/template.md"),
-			template_new_daily = vim.fn.expand("~/Documents/journal/daily/template.md"),
-
-			vaults = {
-				coimbra = {
-					home = vim.fn.expand("~/Documents/uc/notes"),
-					template_new_note = vim.fn.expand("~/Documents/uc/notes/template.md"),
-					uuid_type = "rand",
-					new_note_filename = "title-uuid",
-					filename_space_subst = "-",
-				},
-			},
 
 			calendar_opts = {
 				weeknm = 5,
