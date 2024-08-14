@@ -1,13 +1,11 @@
 [user]
-name = lutzzdias
-email = thiagolutzdias@hotmail.com
-signingkey = B61C555C59AB918B1EE135F799D61F35B091640E
-
-[init]
-	defaultBranch = main
+	name = lutzzdias
+	email = thiagolutzdias@hotmail.com
+	signingkey = /Users/lutz/.ssh/id_ed25519.pub
 [core]
-	autocrlf = false
-[push]
-	autoSetupRemote = true
+	editor = neovim
+    autocrlf = input
+[gpg]
+	format = ssh
 [commit]
 	gpgsign = true
