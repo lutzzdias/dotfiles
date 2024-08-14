@@ -1,11 +1,19 @@
 # Remove last login msg
 clear
 
+# Brew completions
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  autoload -Uz compinit
+  compinit
+fi
+
 export EDITOR='nvim'
 
 # Aliases
 alias ls='eza'
-alias vim='nvim'
 
 # init starship
 eval "$(starship init zsh)"
