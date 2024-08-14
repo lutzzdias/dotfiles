@@ -9,3 +9,6 @@ nvim/undo/
 
 # copilot
 github-copilot/
+
+# volta (node versioning)
+volta/
