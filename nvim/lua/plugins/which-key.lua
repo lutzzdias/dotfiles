@@ -1,13 +1,9 @@
 return {
 	"folke/which-key.nvim",
 	event = "VeryLazy",
+	dependencies = { "echasnovski/mini.icons" },
 	config = function()
 		-- import
-		local key = require("which-key")
-
-		key.register(
-			{}, -- mappings
-			{} -- opts
-		)
+		local _ = require("which-key")
 	end,
 }
