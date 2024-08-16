@@ -21,6 +21,7 @@ return {
 				"cssls", -- css
 				"tailwindcss", -- tailwind
 				"elixirls", -- elixir
+				"eslint", -- js linter
 			},
 
 			-- auto-install configured servers (with lspconfig)
@@ -34,7 +35,6 @@ return {
 				"isort", -- python import sorting
 				"black", -- python formatter
 				"flake8", -- python linter
-				"eslint_d", -- js linter
 			},
 		})
 
