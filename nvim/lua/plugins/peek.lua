@@ -6,7 +6,7 @@ return {
 		local peek = require("peek")
 
 		peek.setup({
-			app = "safari",
+			app = "browser",
 			filetype = {
 				"markdown",
 				"telekasten",
