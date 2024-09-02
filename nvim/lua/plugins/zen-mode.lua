@@ -6,6 +6,7 @@ return {
 
 		zen.setup({
 			window = {
+				width = 0.52,
 				options = {
 					signcolumn = "no", -- disable signcolumn
 					number = false, -- disable number column
