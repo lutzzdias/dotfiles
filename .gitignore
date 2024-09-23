@@ -12,3 +12,7 @@ github-copilot/
 
 # volta (node versioning)
 volta/
+
+# rust
+rust/
+cargo/
