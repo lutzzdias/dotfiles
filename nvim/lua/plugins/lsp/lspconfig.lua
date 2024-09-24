@@ -40,6 +40,9 @@ return {
 		-- python
 		lsp.pyright.setup({ capabilities = capabilities })
 
+		-- go
+		lsp.gopls.setup({ capabilities = capabilities })
+
 		-- elixir
 		lsp.elixirls.setup({ cmd = { "elixir-ls" }, capabilities = capabilities })
 

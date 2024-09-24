@@ -15,8 +15,9 @@ return {
 		lspconfig.setup({
 			ensure_installed = {
 				"clangd", -- c/c++
-				"tsserver", -- typescript
+				"ts_ls", -- typescript
 				"lua_ls", -- lua
+				"gopls", -- golang
 				"html", -- html
 				"cssls", -- css
 				"tailwindcss", -- tailwind
@@ -35,6 +36,10 @@ return {
 				"isort", -- python import sorting
 				"black", -- python formatter
 				"flake8", -- python linter
+				"gofumpt", -- go formatter
+				"goimports-reviser", -- goimports with revisions
+				"golines", -- go long line formatter
+				"delve", -- go debugger
 			},
 		})
 
