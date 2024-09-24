@@ -7,6 +7,7 @@ return {
 		copilot.setup({
 			suggestion = {
 				auto_trigger = true,
+				debouce = 50,
 				keymap = {
 					accept = "<S-TAB>",
 				},
