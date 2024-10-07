@@ -16,3 +16,6 @@ volta/
 # rust
 rust/
 cargo/
+
+# go
+go/
