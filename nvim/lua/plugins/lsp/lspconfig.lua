@@ -29,7 +29,7 @@ return {
 		lsp.html.setup({ capabilities = capabilities })
 
 		-- typescript
-		lsp.tsserver.setup({ capabilities = capabilities })
+		lsp.ts_ls.setup({ capabilities = capabilities })
 
 		-- css
 		lsp.cssls.setup({ capabilities = capabilities })
