@@ -31,6 +31,10 @@ require("lazy").setup({
 		title = "lazy.nvim",
 	},
 
+	dev = {
+		path = "~/Developer/nvim",
+	},
+
 	install = { colorscheme = { "tokyonight" } },
 })
 

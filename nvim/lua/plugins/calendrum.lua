@@ -1,4 +1,4 @@
 return {
-	"lutzzdias/calendrum.nvim",
+	"calendrum.nvim",
 	dev = true,
 }
