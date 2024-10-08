@@ -39,7 +39,7 @@ return {
 					description = "AI Review",
 				},
 				Tests = {
-					mapping = "leader>at",
+					mapping = "<leader>at",
 					description = "AI Tests",
 				},
 				Fix = {
