@@ -19,3 +19,9 @@ cargo/
 
 # go
 go/
+
+# docker
+docker/
+
+# pyenv
+pyenv/
