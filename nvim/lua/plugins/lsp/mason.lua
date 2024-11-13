@@ -31,7 +31,7 @@ return {
 
 		tool_installer.setup({
 			ensure_installed = {
-				"prettierd", -- prettierd formatter
+				"prettier", -- prettier formatter
 				"stylua", -- lua formatter
 				"isort", -- python import sorting
 				"black", -- python formatter
