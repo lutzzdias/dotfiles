@@ -25,3 +25,7 @@ docker/
 
 # pyenv
 pyenv/
+
+# flutter 
+fvm/ 
+flutter/
