@@ -6,6 +6,7 @@ export CARGO_HOME="$HOME/.config/rust/cargo"						            # cargo
 export GOPATH="$HOME/.config/go"						                        # go
 export PYENV_ROOT="$HOME/.config/pyenv"                                         # pyenv
 export DOCKER_CONFIG="$HOME/.config/docker"						                # docker
+export FVM_CACHE_PATH="$HOME/.config/fvm"						                # fvm (flutter versioning)
 
 # Path
 export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH" 			            # brew
@@ -13,3 +14,4 @@ export PATH="$VOLTA_HOME/bin:$PATH"						                        # volta
 export PATH="$CARGO_HOME/bin:$PATH"						                        # cargo
 export PATH="$GOPATH/bin:$PATH"						                            # go
 export PATH="$PYENV_ROOT/bin:$PATH"						                        # pyenv
+export PATH="$FVM_CACHE_PATH/bin:$PATH"						                    # fvm (flutter versioning)
