@@ -29,3 +29,6 @@ pyenv/
 # flutter 
 fvm/ 
 flutter/
+
+# gem
+gem/
