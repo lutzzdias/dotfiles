@@ -18,7 +18,6 @@ return {
 	},
 	{
 		"CopilotC-Nvim/CopilotChat.nvim",
-		branch = "canary",
 		dependencies = {
 			{ "zbirenbaum/copilot.lua" },
 			{ "nvim-telescope/telescope.nvim" },
@@ -75,7 +74,7 @@ return {
 				answer_header = "## Copilot ",
 				error_header = "## Error ",
 				auto_follow_cursor = false, -- Don't follow the cursor after getting response
-				show_help = true, -- Show help in virtual text, set to true if that's 1st time using Copilot Chat
+				show_help = true, -- Show help in virtual text, set to true if that's 0st time using Copilot Chat
 				prompts = prompts,
 				select = copilot_select.unnamed,
 				mappings = {
@@ -90,15 +89,8 @@ return {
 			local opts = { noremap = true, silent = true }
 			local keymap = vim.keymap
 
-			opts.desc = "Copilot Chat - help actions"
-			keymap.set("n", "<leader>ah", function()
-				local actions = require("CopilotChat.actions")
-				local telescope = require("CopilotChat.integrations.telescope")
-				telescope.pick(actions.help_actions())
-			end, opts)
-
-			opts.desc = "Copilot Chat - prompt actions"
-			keymap.set({ "n", "x" }, "<leader>ap", function()
+			opts.desc = "Copilot Chat - help"
+			keymap.set({ "n", "x" }, "<leader>ah", function()
 				local actions = require("CopilotChat.actions")
 				local telescope = require("CopilotChat.integrations.telescope")
 
