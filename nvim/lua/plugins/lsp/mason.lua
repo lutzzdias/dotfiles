@@ -17,11 +17,9 @@ return {
 				"clangd", -- c/c++
 				"ts_ls", -- typescript
 				"lua_ls", -- lua
-				"gopls", -- golang
 				"html", -- html
 				"cssls", -- css
 				"tailwindcss", -- tailwind
-				"elixirls", -- elixir
 				"eslint", -- js linter
 			},
 
@@ -36,10 +34,6 @@ return {
 				"isort", -- python import sorting
 				"black", -- python formatter
 				"flake8", -- python linter
-				"gofumpt", -- go formatter
-				"goimports-reviser", -- goimports with revisions
-				"golines", -- go long line formatter
-				"delve", -- go debugger
 			},
 		})
 

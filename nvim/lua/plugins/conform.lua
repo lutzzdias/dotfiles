@@ -19,7 +19,6 @@ return {
 				markdown = { "prettier" },
 				lua = { "stylua" },
 				python = { "isort", "black" }, -- sort imports then apply lint
-				go = { "goimports-reviser", "gofumpt" },
 			},
 
 			format_on_save = {
