@@ -18,6 +18,8 @@ return {
 				"html",
 				"css",
 				"markdown",
+				"markdown_inline",
+				"latex",
 				"lua",
 				"cpp",
 				"python",

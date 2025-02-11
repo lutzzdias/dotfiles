@@ -25,6 +25,9 @@ return {
 			},
 		})
 
+		-- treesitter
+		require("vim.treesitter.language").register("markdown", "telekasten")
+
 		-- keymaps
 		local keymap = vim.keymap
 		local opts = { noremap = true, silent = true }
