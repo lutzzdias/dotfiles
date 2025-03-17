@@ -110,8 +110,8 @@ local function split_nav(resize_or_move, key)
 	}
 end
 
+-- Keymaps
 config.keys = {
-
 	-- move between split panes
 	split_nav("move", "h"),
 	split_nav("move", "j"),
@@ -164,7 +164,7 @@ config.keys = {
 	{
 		key = "x",
 		mods = "LEADER",
-		action = wezterm.action.CloseCurrentTab({ confirm = true }),
+		action = wezterm.action.CloseCurrentPane({ confirm = false }),
 	},
 	{
 		key = "p",
@@ -175,6 +175,15 @@ config.keys = {
 		key = "n",
 		mods = "LEADER",
 		action = wezterm.action.ActivateTabRelative(1),
+	},
+	-- clear scrollback, current viewport and redraw prompt
+	{
+		key = "l",
+		mods = "LEADER",
+		action = wezterm.action.Multiple({
+			wezterm.action.ClearScrollback("ScrollbackAndViewport"),
+			wezterm.action.SendKey({ key = "L", mods = "CTRL" }),
+		}),
 	},
 }
 
