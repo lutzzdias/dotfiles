@@ -23,7 +23,6 @@ return {
 				"lua",
 				"cpp",
 				"python",
-				"elixir",
 			},
 
 			-- context aware selection
