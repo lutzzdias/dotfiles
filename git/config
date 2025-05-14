@@ -2,14 +2,78 @@
 	name = lutzzdias
 	email = thiagolutzdias@hotmail.com
 	signingkey = /Users/lutz/.ssh/id_ed25519.pub
+
+[gpg]
+	format = ssh
+
 [core]
 	editor = nvim
     autocrlf = input
-[gpg]
-	format = ssh
-[commit]
-	gpgsign = true
-[push]
-	autoSetupRemote = true
+    compression = 9
+    whitespace = error
+    preloadIndex = true
+
+[advice]
+    addEmptyPathspec = false
+    pushNonFastForward = false
+    statusHints = false
+
 [init]
 	defaultBranch = main
+
+[status]
+    branch = true
+    showStash = true
+    showUntrackedFiles = all
+
+[diff]
+    context = 3
+    renames = copies
+    interHunkContext = 10
+
+[interactive]
+    singlekey = true
+
+[commit]
+	gpgsign = true
+
+[push]
+	autoSetupRemote = true
+    default = current
+    followTags = true
+
+[pull]
+    default = current
+
+[log]
+    abbrevCommit = true
+    graphColors = blue,yellow,cyan,magenta,green,red
+
+[branch]
+    sort = -committerdate
+
+[tag]
+    sort = -taggerdate
+
+[fetch]
+	prune = true
+
+[remote "origin"]
+	prune = true # automatically remove deleted origin branches
+
+[credential]
+	helper = store
+
+[color "decorate"]
+    HEAD = red
+    branch = blue
+    tag = yellow
+    remoteBranch = magenta
+
+[color "branch"]
+    current = magenta
+    local = default
+    remote = yellow
+    upstream = green
+    plain = blue
+
