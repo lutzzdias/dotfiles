@@ -1,2 +1,5 @@
 os:
   editCommand: "nvim"
+
+git:
+  overrideGpg: true
