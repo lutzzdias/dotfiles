@@ -18,3 +18,4 @@ export PATH="$GOPATH/bin:$PATH"						                            # go
 export PATH="$PYENV_ROOT/bin:$PATH"						                        # pyenv
 export PATH="$FVM_CACHE_PATH/bin:$PATH"						                    # fvm (flutter versioning)
 export PATH="$GEM_HOME/bin:$PATH"						                        # ruby gems
+export PATH="$HOME/.luarocks/bin:$PATH"
