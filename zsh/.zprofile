@@ -8,6 +8,7 @@ export PYENV_ROOT="$HOME/.config/pyenv"                                         
 export DOCKER_CONFIG="$HOME/.config/docker"						                # docker
 export FVM_CACHE_PATH="$HOME/.config/fvm"						                # fvm (flutter versioning)
 export GEM_HOME="$HOME/.config/gem"						                        # ruby gems
+export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
 
 # Path
 export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH" 			            # brew

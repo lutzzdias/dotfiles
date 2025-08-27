@@ -20,6 +20,7 @@ export EDITOR='nvim'
 
 # Aliases
 alias ls='eza'
+alias flutter='fvm flutter'
 
 # init starship
 eval "$(starship init zsh)"
