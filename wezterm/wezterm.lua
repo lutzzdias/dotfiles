@@ -47,7 +47,12 @@ wezterm.on("update-status", function(window, pane)
 end)
 -- tab item
 wezterm.on("format-tab-title", function(tab, _, _, _, _, _)
-	local title = (#tab.tab_title > 0 and tab.tab_title) or ("tab " .. tab.tab_index)
+	local title
+	if tab.tab_index == 0 then
+		title = "main"
+	else
+		title = (#tab.tab_title > 0 and tab.tab_title) or ("tab " .. tab.tab_index)
+	end
 	return wezterm.format({
 		{ Text = " " .. title .. " " },
 	})
@@ -92,12 +97,12 @@ local direction_keys = {
 local function split_nav(resize_or_move, key)
 	return {
 		key = key,
-		mods = resize_or_move == "resize" and "META" or "CTRL",
+		mods = resize_or_move == "resize" and "CTRL|SHIFT" or "CTRL",
 		action = wezterm.action_callback(function(win, pane)
 			if is_vim(pane) then
 				-- pass the keys through to vim/nvim
 				win:perform_action({
-					SendKey = { key = key, mods = resize_or_move == "resize" and "META" or "CTRL" },
+					SendKey = { key = key, mods = resize_or_move == "resize" and "CTRL|SHIFT" or "CTRL" },
 				}, pane)
 			else
 				if resize_or_move == "resize" then
