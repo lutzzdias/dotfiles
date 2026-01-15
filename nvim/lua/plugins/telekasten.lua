@@ -16,8 +16,12 @@ return {
 			filename_space_subst = "-",
 
 			home = vim.fn.expand("~/Documents/notes"),
+			dailies = vim.fn.expand("~/Documents/journal/daily"),
+			weeklies = vim.fn.expand("~/Documents/journal/weekly"),
 
 			template_new_note = vim.fn.expand("~/Documents/notes/template.md"),
+			template_new_daily = vim.fn.expand("~/Documents/journal/daily-template.md"),
+			template_new_weekly = vim.fn.expand("~/Documents/journal/weekly-template.md"),
 
 			calendar_opts = {
 				weeknm = 5,
@@ -43,6 +47,9 @@ return {
 
 		opts.desc = "Go to today's note"
 		keymap.set("n", "<leader>zd", telekasten.goto_today, opts)
+
+		opts.desc = "Go to this week's note"
+		keymap.set("n", "<leader>zw", telekasten.goto_thisweek, opts)
 
 		opts.desc = "Go to link under cursor"
 		keymap.set("n", "<leader>zz", telekasten.follow_link, opts)
